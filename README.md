@@ -87,3 +87,21 @@ func didClick(){print("test")}
 //func didClick(btn:UIButton){btn.setTitle("new",for:.normal)}
 
 ```
+
+###5 Alert controller popup messages
+Four steps
+- Step one is to create an alert controller.The alert controller is the manager, or you can think of it as the whole unit, that whole alert or whole pop up that we see. 
+- Then we need to create an alert action. Actions are the buttons with the connected responses, when that button is tapped. 
+- Then you need to connect the controller to the action. 
+- And finally, you need to present the alert. 
+
+```
+@IBAction func showAlert(){
+  let alert:UIAlertController = UIAlertController(title: "Title", message:"",preferredStyle: .alert)
+  let action1:UIAlertAction = UIAlertAction(title:"Cancel",style:.cancel){(_:UIAlertAction) in  print("cancelled")
+  alert.addAction(adtion1)
+  self.present(alert,animated:true){
+    print("completed")
+  }
+}
+```
