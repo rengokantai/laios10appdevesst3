@@ -105,3 +105,35 @@ Four steps
   }
 }
 ```
+###6 Sliders and progress bars
+####03:32
+add event for slider:  
+Connection:Action  
+Name(any): didMoveSlider  
+Type:UISlider  
+Event: Value Changed
+
+####04:27
+```
+IBOutlet weak var progBar:UIProgressView
+@IBAction func didMoveSlider(_ sender:UISlider){
+  progBar.progress = sender.value    
+}
+```
+
+####06:22
+```
+let percent:Float = sender.value/sender.maximunValue
+```
+
+###7 Switches and activity indicators
+####03:56 add action to switch
+COnnection:action
+Type: UISwitch  
+Event:Value Changed  
+Arguments: Sender
+
+```
+@IBOutlet weak var myIndicator:UIActivityIndicatorView!
+@IBAction func switchDidChange(_ sender:UISwitch){}
+```
