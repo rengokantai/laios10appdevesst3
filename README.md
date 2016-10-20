@@ -68,3 +68,22 @@ func pickerView(_ pickerView:UIPickerView, didSelectRow row:Int,inComponent comp
   label.text=items[component][row]
 }
 ```
+
+
+###4 Create UI elements with code
+####02:00
+```
+let label:UILabel = UILabel(frame:CGRect(x:20,y:20,width:100,height:100))
+labe.text=""
+view.addSubview(label)
+
+let button:UIButton = UIButton(frame:CGRect(x:20,y:20,width:100,height:100))
+button.setTitle("",for:.normal)
+button.backgroundColor=UIColor.darkGray
+button.addTarget(self,action:#selector(didClick),for .touchUpInside)
+
+func didClick(){print("test")}
+
+//func didClick(btn:UIButton){btn.setTitle("new",for:.normal)}
+
+```
