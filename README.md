@@ -160,3 +160,35 @@ w->R(regular)
 h->C(compact)  
 h->R(regular)  
 
+####03:48 introduce variations based on
+####04:40
+You can add extra components. When completed, click `done varying`
+
+###2 Font sizes with size classes
+####02:20
+the only phone in landscape modewith regular(R) width is plus level (6+)
+
+
+###3 Pins with size classes
+####01:40 add pins
+####02:16 resolve auto layout issues
+update frames
+
+####02:56
+What if I wanted to maintain the same size squares here? So, let's say, when we lay it out in landscape, we don't wanna squish these squares, we want them to be next to each other.  
+
+####03:20
+(landscape mode)->vary for traits->check height  
+delete all pins:  
+size inspector->delete all pins
+
+####05:26
+rotate screen in simulator:cmd ->
+
+
+
+
+
+
+
+
