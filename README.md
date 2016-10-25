@@ -137,3 +137,26 @@ Arguments: Sender
 @IBOutlet weak var myIndicator:UIActivityIndicatorView!
 @IBAction func switchDidChange(_ sender:UISwitch){}
 ```
+
+
+
+
+
+
+
+
+
+##3. Size Classes
+###1 Basics of size classes
+####01:36  
+iphone SE portrait:
+w->C(compact)  
+h->R(regular)  
+iphone SElandscape:
+w->C(compact)  
+h->C(compact)  
+iphone 6 plus portrait:
+w->R(regular) 
+h->C(compact)  
+h->R(regular)  
+
