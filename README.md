@@ -146,6 +146,84 @@ Arguments: Sender
 
 
 
+
+
+
+
+
+
+
+
+
+##2. Web Views
+###1 Web views
+UIWebView is deprecated, use WKWebView  
+
+####02:15
+ViewController.swift
+```
+import WebKit
+
+class ViewController:UIViewController{
+  var webView:WKWebView!
+  
+  override func viewDidLoad(){
+  super.viewDisLoad()
+  webView = WKWebView(from: CGRect(x:0,y:20,width:300,height:300)
+  view.addSubview(webView)
+  //test
+ //params: webView.loadHTMLString(string:String,baseURL:URL?)
+ webView.loadHTMLString("<p>test</p>",baseURL:nil)
+  }
+  
+}
+```
+
+###2 Load a file into a web view
+[old version](http://stackoverflow.com/questions/28748650/nsbundle-mainbundle-urlforresourcebach1-withextension-jpg-returning-nu)
+3.0 vs old:
+```
+//swift 3.0
+if let resourceUrl = Bundle.main.url(forResource: "test", withExtension: "jpg") {
+    if FileManager.default.fileExists(atPath: resourceUrl.path) {
+        print("file found")
+    }
+}
+```
+```
+//old
+if let resourceUrl = NSBundle.mainBundle().URLForResource("test", withExtension: "jpg") {
+    if NSFileManager.defaultManager().fileExistsAtPath(resourceUrl.path!) {
+        print("file found")
+    }
+}
+```
+
+Hence
+```
+let url:URL = BBundle.main.url(forResource:"page",withExtension:"html")! //swift3.0
+let req:URLRequest = URLRequest(url:url)
+webView.load(req)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##3. Size Classes
 ###1 Basics of size classes
 ####01:36  
