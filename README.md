@@ -205,6 +205,15 @@ let url:URL = BBundle.main.url(forResource:"page",withExtension:"html")! //swift
 let req:URLRequest = URLRequest(url:url)
 webView.load(req)
 ```
+###3 Load a URL into a web view
+```
+let url:URL=URL(string:"http://www.google.com")!
+let req:URLRequest=URLRequest(url:url)
+webView.load(req)
+```
+
+###4 Create layout constraints with code
+
 
 
 
