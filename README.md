@@ -222,8 +222,10 @@ override func viewDisLoad(){
   ...
   webView.translatesAutoresizingMaskIntoConstraints = false
   let width =NSLayoutConstraint(item:webView,attribute:.width, relatedBy:.equal,toItemLview,attribute:.width,multiplier:1.0,constant:0)
-  let height =NSLayoutConstraint(item:webView,attribute:.height, relatedBy:.equal,toItemLview,attribute:.height,multiplier:1.0,constant:0)
-  view.addConstraints([width,height])
+  let height =NSLayoutConstraint(item:webView,attribute:.height, relatedBy:.equal,toItemLview,attribute:.height,multiplier:1.0,constant:-20)
+  //add a top(margin)
+   let top =NSLayoutConstraint(item:webView,attribute:.top, relatedBy:.equal,toItemLview,attribute:.top,multiplier:1.0,constant:20)
+  view.addConstraints([width,height,top])
 }
 ```
 
