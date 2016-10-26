@@ -213,7 +213,19 @@ webView.load(req)
 ```
 
 ###4 Create layout constraints with code
-
+ViewController.swift
+```
+override func viewDisLoad(){
+  super.viewDidLoad()
+  webView = WKWebView()
+  view.addSubView(webView)
+  ...
+  webView.translatesAutoresizingMaskIntoConstraints = false
+  let width =NSLayoutConstraint(item:webView,attribute:.width, relatedBy:.equal,toItemLview,attribute:.width,multiplier:1.0,constant:0)
+  let height =NSLayoutConstraint(item:webView,attribute:.height, relatedBy:.equal,toItemLview,attribute:.height,multiplier:1.0,constant:0)
+  view.addConstraints([width,height])
+}
+```
 
 
 
