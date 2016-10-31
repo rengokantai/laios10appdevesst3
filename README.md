@@ -128,18 +128,54 @@ let percent:Float = sender.value/sender.maximunValue
 
 ###7 Switches and activity indicators
 ####03:56 add action to switch
-COnnection:action
+Connection:action
+Name: switchDidChange
 Type: UISwitch  
 Event:Value Changed  
 Arguments: Sender
 
+
+####04:50
 ```
 @IBOutlet weak var myIndicator:UIActivityIndicatorView!
-@IBAction func switchDidChange(_ sender:UISwitch){}
+@IBAction func switchDidChange(_ sender:UISwitch){
+  if myIndicator.isAnimating{       // if !sender.isOn
+    myIndicator.stopAnimating()
+  } else{
+    myIndicator.startAnimating()
+  }
+}
 ```
 
 
 
+
+
+
+
+
+
+##8 Segmented controls
+
+####03:57 create action
+Connection:Action
+Name: segmentDidChange  
+Type: UISegmentedControl  
+Event: Value Changed
+####04:50
+```
+@IBAction func segmentDidChange(_ sender:UISegmentedControl){
+  let selectedIndex = sender.selectedSegmentedIndex
+  label.text= sender.titleForSegment(at:selectedIndex)
+}
+```
+
+
+
+###9 Image views
+
+####03:15
+attribute inspector-> default image view: Content mode= scale to fill
 
 
 
@@ -231,7 +267,7 @@ override func viewDisLoad(){
 
 
 
-
+###5 Create a simple web browser
 
 
 
