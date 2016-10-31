@@ -268,10 +268,19 @@ override func viewDisLoad(){
 
 
 ###5 Create a simple web browser
+```
+func textFieldShouldReturn(_ textField:UITextField)->Bool{
+  let url:URL = URL(string:textField.text)!
+  let req:URLRequest=URLRequest(rul:url)
+  webView.load(req)
+  textField.resignFirstRespnder()
+  return false
+}
+```
 
 
-
-
+####05:46
+(simulator)cmd k toggle soft keyboard
 
 
 
